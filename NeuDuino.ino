@@ -32,12 +32,12 @@ void clear()
 void setup()
 {
   // build the LedMap
-  for( int i=0, count=0; i<NUM_PINS-1; i++ )
+  for( int pinA=0, pair=0; pinA<NUM_PINS-1; pinA++ )
   {
-    for( int j=i+1; j<NUM_PINS; j++, count++ )
+    for( int pinB=i+1; pinB<NUM_PINS; pinB++, pair++ )
     {
-      LedMap[count][0] = i;
-      LedMap[count][1] = j;
+      LedMap[pair][0] = pinA;
+      LedMap[pair][1] = pinB;
     }
   }
 
